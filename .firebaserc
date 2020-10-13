@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "trelol": {
+      "hosting": {
+        "Trelol": [
+          "trelol"
+        ]
+      }
+    }
+  }
+}
