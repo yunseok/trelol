@@ -23,4 +23,10 @@ export class SnackService {
       )
       .subscribe();
   }
+
+  alreadyLoggedIn() {
+    this.snackBar.open("You're already logged in", 'OK', {
+      duration: 5000
+    });
+  }
 }
