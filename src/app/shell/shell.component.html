@@ -24,21 +24,26 @@
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-  
-  
+          *ngIf="isHandset$ | async">  
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
 
-        <!-- MAYBE ADD TITLE VARIABLE HERE -->
-        <span class="logo" routerLink="/">Trelol</span>
+        <span class="logo" routerLink="/">😂 TRELOL 😂</span>
   
-        <span class="fill-space"></span>
         <div *ngIf="!(isHandset$ | async)">
           <a mat-button routerLink="/customers">Customers</a>
-  
-          <a mat-button routerLink="/login">Login</a>
-  
+          <a mat-button *ngIf="!(afAuth.authState | async)" routerLink="/login">Login</a>
+          <a mat-button *ngIf="afAuth.authState | async as user">
+            <img 
+              class="user" 
+              [src]="user.photoURL"
+              [matMenuTriggerFor]="userMenu"
+            />
+            <mat-menu #userMenu="matMenu">
+              <span mat-menu-item>Signed in as <b>{{user.email}}</b></span>
+              <button mat-menu-item (click)="afAuth.signOut()">Log out</button>
+            </mat-menu>
+          </a>
         </div>
   
       </mat-toolbar>

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './user/auth.guard';
 
 const routes: Routes = [
+  // remove canActivate for AuthGuard
   { path: "", component: HomeComponent, canActivate: [ AuthGuard ] },
   { 
     path: "login", loadChildren: () => import("./user/user.module").then(m => m.UserModule)
