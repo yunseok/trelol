@@ -1,1 +1,10 @@
-<p>login works!</p>
+<div *ngIf="!(afAuth.authState | async)">
+    <button mat-button appGoogleSignin>LOGIN USING GOOGLE!!</button>
+    <span>OR</span>
+    <app-email-login></app-email-login>
+</div>
+
+<div *ngIf="afAuth.authState | async as user">
+    <h2>Signed in as {{ user.email }}!!</h2>
+    <button mat-raised-button (click)="afAuth.signOut()">LOG OUT!!</button>
+</div>
