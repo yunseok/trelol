@@ -7,13 +7,13 @@ import { BoardService } from '../board.service';
   template: `
   <h1 mat-dialog-title>Task</h1>
   <div mat-dialog-content class="content">
-    <mat-form-field>
+    <div mat-form-field>
       <textarea
         placeholder="Task description"
         matInput
         [(ngModel)]="data.task.description"
       ></textarea>
-    </mat-form-field>
+    </div>
     <br />
     <mat-button-toggle-group
       #group="matButtonToggleGroup"

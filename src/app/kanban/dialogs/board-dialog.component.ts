@@ -7,9 +7,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
     <h1 mat-dialog-title>Board</h1>
     <div mat-dialog-content>
     <p>What shall we call this board?</p>
-      <mat-form-field>
+      <div mat-form-field>
         <input placeholder="title" matInput [(ngModel)]="data.title" />
-      </mat-form-field>
+      </div>
     </div>
     <div mat-dialog-actions>
       <button mat-button (click)="onNoClick()">Cancel</button>

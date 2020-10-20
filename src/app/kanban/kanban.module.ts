@@ -14,15 +14,14 @@ import { BoardListComponent } from './board-list/board-list.component';
 import { BoardComponent } from './board/board.component';
 import { BoardDialogComponent } from './dialogs/board-dialog.component';
 import { TaskDialogComponent } from './dialogs/task-dialog.component';
-import { DeleteButtonComponent } from '../delete-button/delete-button.component';
-
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 @NgModule({
   declarations: [
     BoardListComponent, 
     BoardComponent, 
     BoardDialogComponent, 
-    TaskDialogComponent,
+    TaskDialogComponent, 
     DeleteButtonComponent
   ],
   imports: [

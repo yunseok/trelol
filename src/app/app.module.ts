@@ -26,14 +26,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ShellComponent } from './shell/shell.component';
 import { HomeComponent } from './home/home.component';
 import { environment } from 'src/environments/environment';
-import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShellComponent,
-    HomeComponent,
-    DeleteButtonComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
