@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
     
     if (!isLoggedIn) {
       this.snack.authError();
-    } 
+    }
 
     return isLoggedIn;
   }

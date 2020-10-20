@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
@@ -9,18 +9,9 @@ import { SnackService } from 'src/app/services/snack.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(
-    public afAuth: AngularFireAuth,
-    public router: Router,
-    public snack: SnackService
+    public afAuth: AngularFireAuth
   ) { }
-
-  ngOnInit() {
-    if (this.afAuth.user) {
-      this.snack.alreadyLoggedIn();
-      this.router.navigate(["/"]);
-    }
-  }
 }
